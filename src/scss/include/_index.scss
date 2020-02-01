@@ -1,0 +1,163 @@
+#banner {
+
+    .form-control[type="search"]::placeholder {
+        color: rgb(197, 197, 197);
+    }
+
+    .movies {
+        .movie {
+            @include parent();
+
+            .movie_bg {
+                @include back();
+            }
+
+            @media (max-width: 768px) {
+                .custom-column {
+                    padding-top: 90px;
+                    padding-bottom: 30px;
+                }
+            }
+
+            .movie-head {
+                .movie-name {
+                    h2 {
+                        font-size: 2.5rem;
+
+                        @media (max-width: 768px) {
+
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+
+            .movie-description {
+                p {
+                    line-height: 1.7rem;
+                }
+            }
+        }
+    }
+}
+
+.list {
+    .type-list {
+
+        h3 {
+            @media (max-width: 768px) {
+                font-size: 1.4rem;
+            }
+        }
+
+        a {
+            @media (max-width: 768px) {
+                font-size: .89rem;
+            }
+        }
+    }
+
+    .movie {
+        position: relative;
+
+        &:hover img {
+            opacity: .4;
+            @include tran(.3s);
+        }
+
+        &:hover .movie-detail {
+            opacity: 1;
+            @include tran(.3s);
+        }
+
+        img {
+            @include tran(.3s);
+        }
+
+        .movie-detail {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            opacity: 0;
+        }
+
+        .movie-head {
+            .movie-name {
+                font-size: 1.45rem;
+
+                @media (max-width:768px) {
+                    font-size: 1rem;
+                }
+            }
+
+            .move-year {
+                @media (max-width:768px) {
+                    font-size: .9rem;
+                }
+            }
+        }
+
+        .movie-rating {
+            .fa-star {
+                font-size: .9rem;
+
+                @media (max-width:768px) {
+                    font-size: .7rem;
+                }
+            }
+
+            span {
+                font-size: .93rem;
+
+                @media (max-width:768px) {
+                    font-size: .87rem;
+                }
+            }
+        }
+
+        .movie-views {
+            p {
+                @media (max-width:768px) {
+                    font-size: .9rem;
+                }
+            }
+        }
+
+        .movie-btn {
+            a {
+                @media (max-width: 350px) {
+                    padding: 0.09rem .17rem;
+                    font-size: .57rem;
+                }
+
+                @media (min-width: 351px) and (max-width: 990px) {
+                    padding: 0.1rem .25rem;
+                    font-size: .7rem;
+                }
+            }
+
+            .fa-heart {
+                font-size: 1.56rem;
+
+                &:hover {
+                    cursor: pointer;
+                    font-weight: 900;
+
+                    &::before {
+                        font-weight: 900;
+                    }
+                }
+
+                @media (max-width: 350px) {
+                    font-size: .9rem;
+                }
+
+                @media (min-width: 351px) and (max-width: 990px) {
+                    font-size: 1.4rem;
+                }
+
+            }
+        }
+    }
+}

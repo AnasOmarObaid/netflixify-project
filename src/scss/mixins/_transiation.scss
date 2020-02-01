@@ -1,0 +1,3 @@
+@mixin tran($sec) {
+    transition: all $sec ease-in-out;
+}

@@ -1,0 +1,67 @@
+#show {
+    .movie {
+        @include parent();
+        padding-top: 5%;
+
+        @media (max-width: 768px) {
+            padding-top: 25%;
+        }
+
+        .movie-bg {
+            @include back('null');
+        }
+
+        .play {
+            height: 70vh;
+            background-color: $black;
+            width: 70vw;
+
+            .play-icon {
+                height: 90px;
+                width: 90px;
+                border-radius: 50%;
+                background-color: $primary;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .movie-detail {
+        .movie-name {
+            font-size: 2rem;
+
+            @media (max-width: 768px) {
+                font-size: 1.2rem;
+            }
+        }
+
+        .movie-rating {
+            .fa-star {
+                @media (max-width: 768px) {
+                    font-size: .9rem;
+                    margin-right: 1px !important;
+                }
+            }
+
+            span {
+                @media (max-width: 768px) {
+                    font-size: .8rem;
+                }
+            }
+        }
+
+        .movie-description {
+            p {
+                line-height: 1.7rem;
+
+                @media (max-width: 768px) {
+                    font-size: .9rem;
+                }
+            }
+        }
+
+    }
+}

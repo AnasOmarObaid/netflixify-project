@@ -1,0 +1,220 @@
+extends ../layout
+block title 
+  title Netflixify | Show
+block content
+  #show
+    // start navbar
+    - var title = 'show'
+    include ../_include/navbar
+    .movie
+      .movie-bg(style={ background: 'linear-gradient(rgba(0,0,0, .8), rgba(0,0,0, .8)), url("../dist/images/iron.jpg") center/cover no-repeat'})
+      .container
+        .row
+          .col-md-8.play.col-10.d-flex.align-items-center.justify-content-center.mx-auto.mx-md-0(style={ background: 'linear-gradient(rgba(0,0,0, .4), rgba(0,0,0, .4)), url("../dist/images/iron.jpg") center/cover no-repeat'})
+            span.play-icon.d-flex.align-items-center.justify-content-center
+              i.fas.fa-play.text-white.fa-2x
+          .col-md-4.movie-detail.my-4.my-md-0
+            h2.movie-name.text-white.my-0 Iron Man
+            .movie-rating
+              i.fas.fa-star.fa-fw.mr-2.text-primary
+              i.fas.fa-star.fa-fw.mr-2.text-primary
+              i.fas.fa-star.fa-fw.mr-2.text-primary
+              i.fas.fa-star.fa-fw.mr-2.text-primary
+              i.fas.fa-star.fa-fw.mr-2.text-primary
+              span.text-white 5.3
+            .movie-description
+              p.lead.text-white.fw-400.mt-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, quas, soluta nostrum quia natus laboriosam deleniti officia aperiam repellat ex laborum, fugiat ipsam alias facilis porro maxime accusamus ratione voluptates!
+            .movie-btn
+              a.btn.btn-primary(href='#')
+                i.far.fa-heart
+                |  Add To Favorite
+
+    // start listing
+  .list.pt-5.pb-1
+    .container
+      .row.py-2.type-list
+        .col-12.justify-content-between.d-flex
+          h3.fw-500.text-white Action
+          a.align-self-center.text-primary(href='#') See All
+      .movies.owl-carousel.owl-theme
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='../dist/images/movieposter3.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='../dist/images/forground-iron.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='../dist/images/movieposter2.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='../dist/images/forground-iron.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='../dist/images/movieposter6.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='../dist/images/movieposter7.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='../dist/images/movieposter2.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='../dist/images/forground-iron.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='../dist/images/forground-iron.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml
+block footer

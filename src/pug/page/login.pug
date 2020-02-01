@@ -1,0 +1,37 @@
+extends ../layout
+block title
+  title Netflixify | login
+block content
+  // login start
+  section(class='login')
+    .login-bg
+    .container
+      .row
+        div(class='col-10 col-md-8 mx-auto bg-white p-3')
+          h2(class='text-center net')
+            a(href='../index.html') Netflix
+              span(class='text-primary') ify
+          hr
+          // start form
+          form(action='')
+            .form-group
+              label(for='email') Email:
+              input(type='email' id='email' class='form-control' name='email' placeholder='Enter Email')
+            .form-group
+              label(for='password') Password
+              input(type='password' id='password' class='form-control' name='password' placeholder='Enter Password')
+            .form-group
+              button(class='btn btn-primary btn-block') login
+            .form-group
+              .custom-control.custom-checkbox
+                input#customCheck1.custom-control-input(type='checkbox')
+                label.custom-control-label(for='customCheck1') Remember Me
+            hr
+            p(class='text-center lead') Do You Not Have Account? 
+              a(href='register.html') Register
+            button(class='btn btn-block text-white' style={background: '#3b5998'}) <span class='fab fa-facebook-f fa-fw'></span> Login By Facebook
+            button(class='btn btn-block text-white' style={background: '#ea4335'}) <span class='fab fa-google fa-fw'></span>   Login By Email
+          // end form
+
+block footer
+block copyFooter

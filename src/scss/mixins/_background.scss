@@ -1,0 +1,26 @@
+@mixin parent($flex:'true') {
+    min-height: 100vh;
+    position: relative;
+    background-color: $black;
+
+    @if $flex=='true' {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@mixin back($image:'null') {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @if($image !='null') {
+        background: linear-gradient(rgba($black, .8), rgba($black, .8)), url($image) center/cover no-repeat;
+    }
+
+    filter: blur(5px);
+}

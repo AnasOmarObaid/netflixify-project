@@ -1,0 +1,59 @@
+@import './bootstrap/functions';
+@import './bootstrap/variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: $black;
+    overflow-x: hidden;
+}
+
+// mixin
+@import './mixins/background';
+@import './mixins/transiation';
+
+// pages
+@import './include/_index';
+@import './include/_login';
+@import './include/show';
+
+// includes
+@import './include/_footer';
+
+// my framework
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.bg-transparent-nav {
+    background-color: rgba($black, 1);
+    z-index: 999999;
+}
+
+// owl
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel button.owl-dot {
+    color: white;
+    font-size: 1.3rem;
+}

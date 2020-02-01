@@ -1,0 +1,15 @@
+.login {
+    @include parent;
+
+    .net {
+        a {
+            color: #444;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+
+    .login-bg {
+        @include back('../images/jon.jpg');
+    }
+}

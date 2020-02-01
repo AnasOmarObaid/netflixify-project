@@ -1,0 +1,502 @@
+extends ../layout
+block css
+  //- index css style
+  // bootstrap file
+  link(rel='stylesheet' href='dist/css/bootstrap.min.css')
+  // vendor file
+  link(rel='stylesheet' href='dist/css/vendor.min.css')
+  // google font
+  link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet")
+  // netflixify file
+  link(rel='stylesheet'  type="text/css" href='dist/css/netflixify.min.css')
+block title 
+  title Netflixify
+block content
+  // start banner
+  #banner
+    // start navbar
+    include ../_include/navbar
+    // start movies
+    .movies.owl-carousel.owl-theme
+      .movie
+        .movie_bg(style={ background: 'linear-gradient(rgba(0,0,0, .8), rgba(0,0,0, .8)), url("dist/images/iron.jpg") center/cover no-repeat'})
+        .container
+          .row
+            .col-md-6.col-12.custom-column
+              .movie-head.text-white
+                .movie-name.float-left.fw-500
+                  h2  Iron Man
+                .movie-date.float-right
+                  span 2019
+              .clear-both
+              .movie-rating.mb-2
+                i(class='fas fa-star text-primary mr-2')
+                i(class='fas fa-star text-primary mr-2')
+                i(class='fas fa-star text-primary mr-2')
+                i(class='fas fa-star text-primary mr-2')
+                i(class='fas fa-star text-primary mr-2')
+                span.text-white.fw-400 4.8
+              .movie-description
+                p.lead.text-white.fw-400
+                  | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente rerum corporis quisquam molestias iusto magni nemo non velit harum. Tempore, nesciunt iusto. Repellat dolorum culpa praesentium minima voluptatibus perferendis dolor!
+              .movie-btn.text-white
+                a.btn.btn-primary.mr-2.text-capitalize.mb-2.mb-md-0(href='pages/show.html')
+                  i(class='fas fa-play')
+                  |   watch now
+                a.btn.btn-outline-light.text-capitalize(href='#')
+                  i(class='fas fa-heart')
+                  |   add to favorite
+            // start images
+            .col-md-4.col-lg-3.col-5.mx-auto.mt-1.mt-md-0.mx-md-0.mr-md-0.ml-md-auto
+              img.foreground-image.img-fluid(src='dist/images/forground-iron.jpg' alt='image')
+      .movie
+        .movie_bg(style={ background: 'linear-gradient(rgba(0,0,0, .8), rgba(0,0,0, .8)), url("dist/images/FaultinOurStars.png") center/cover no-repeat'})
+        .container
+          .row
+            .col-md-6.col-12.custom-column
+              .movie-head.text-white
+                .movie-name.float-left.fw-500
+                  h2  The Fault In Our Stars
+                .movie-date.float-right
+                  span 2019
+              .clear-both
+              .movie-rating.mb-2
+                i(class='fas fa-star text-primary mr-2')
+                i(class='fas fa-star text-primary mr-2')
+                i(class='fas fa-star text-primary mr-2')
+                i(class='fas fa-star text-primary mr-2')
+                i(class='fas fa-star text-primary mr-2')
+                i(class='fas fa-star text-primary mr-2')
+                span.text-white.fw-400 6
+              .movie-description
+                p.lead.text-white.fw-400
+                  | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente rerum corporis quisquam molestias iusto magni nemo non velit harum. Tempore, nesciunt iusto. Repellat dolorum culpa praesentium minima voluptatibus perferendis dolor!
+              .movie-btn.text-white
+                a.btn.btn-primary.mr-2.text-capitalize.mb-2.mb-md-0(href='#')
+                  i(class='fas fa-play')
+                  |   watch now
+                a.btn.btn-outline-light.text-capitalize(href='#')
+                  i(class='fas fa-heart')
+                  |   add to favorite
+            // start images
+            .col-md-4.col-lg-3.col-5.mx-auto.mt-1.mt-md-0.mx-md-0.mr-md-0.ml-md-auto
+              img.foreground-image.img-fluid(src='dist/images/forgroundFail.jpg' alt='image')
+      .movie
+        .movie_bg(style={ background: 'linear-gradient(rgba(0,0,0, .8), rgba(0,0,0, .8)), url("dist/images/jon.jpg") center/cover no-repeat'})
+        .container
+          .row
+            .col-md-6.col-12.custom-column
+              .movie-head.text-white
+                .movie-name.float-left.fw-500
+                  h2  Jon Wick
+                .movie-date.float-right
+                  span 2019
+              .clear-both
+              .movie-rating.mb-2
+                i(class='fas fa-star text-primary mr-2')
+                i(class='fas fa-star text-primary mr-2')
+                i(class='fas fa-star text-primary mr-2')
+                i(class='fas fa-star text-primary mr-2')
+                i(class='fas fa-star text-primary mr-2')
+                span.text-white.fw-400 5
+              .movie-description
+                p.lead.text-white.fw-400
+                  | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente rerum corporis quisquam molestias iusto magni nemo non velit harum. Tempore, nesciunt iusto. Repellat dolorum culpa praesentium minima voluptatibus perferendis dolor!
+              .movie-btn.text-white
+                a.btn.btn-primary.mr-2.text-capitalize.mb-2.mb-md-0(href='#')
+                  i(class='fas fa-play')
+                  |   watch now
+                a.btn.btn-outline-light.text-capitalize(href='#')
+                  i(class='fas fa-heart')
+                  |   add to favorite
+            // start images
+            .col-md-4.col-lg-3.col-5.mx-auto.mt-1.mt-md-0.mx-md-0.mr-md-0.ml-md-auto
+              img.foreground-image.img-fluid(src='dist/images/backJon.jpg')
+  // start listing
+  .list.pt-5.pb-1
+    .container
+      .row.py-2.type-list
+        .col-12.justify-content-between.d-flex
+          h3.fw-500.text-white Action
+          a.align-self-center.text-primary(href='#') See All
+      .movies.owl-carousel.owl-theme
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/movieposter3.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/forground-iron.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/movieposter2.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/forground-iron.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/movieposter6.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/movieposter7.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/movieposter2.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/forground-iron.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/forground-iron.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml
+  // start listing
+  .list.pt-0
+    .container
+      .row.pb-2.pt-0.type-list-py-0
+        .col-12.justify-content-between.d-flex
+          h3.fw-500.text-white.mt-4.mt-md-0 Drama
+          a.align-self-center.mt-4.mt-md-0.text-primary(href='#') See All
+      .movies.owl-carousel.owl-theme
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/forground-iron.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/movieposter1.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/movieposter2.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/movieposter3.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/movieposter4.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/movieposter7.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/movieposter6.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/movieposter7.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+        .movie.p-0.ml-2.ml-md-0
+          img.img-fluid(src='dist/images/forground-iron.jpg' alt='image')
+          .movie-detail.text-white
+            .movie-head.mb-0
+              .d-flex.justify-content-between
+                p.movie-name.mb-0 Iron Man
+                p.move-year.align-self-center.mb-0 2019
+            .movie-rating
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              i.fas.fa-star.mr-1.text-primary
+              span 4.5
+            .movie-views
+              p.mb-0 Views: 300
+            .movie-btn.d-flex
+              a.btn.btn-primary.flex-fill(href='#')
+                i.fas.fa-play
+                |   Watch Now
+              i.far.fa-heart.align-self-center.ml-2
+block footer
+block jsFooter
+  // jquery js file
+  script(src='dist/js/jquery.min.js')
+  // bootstrap js file
+  script(src='dist/js/bootstrap.min.js')
+  // popper js file
+  script(src='dist/js/popper.min.js')
+  // vendor script
+  script(src='dist/js/vendor_script.min.js')
+  // netflixify js file
+  script(src='dist/js/netflixify.min.js')
